@@ -1,0 +1,93 @@
+@import url(/PANDA/src/css/universal.css);
+
+body {
+  margin-top: 0%;
+}
+
+/*---------------*/
+
+.container {
+  max-width: 2000px !important;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+.card {
+  margin-right: 4%;
+  margin-left: 4%;
+  margin-top: 3%;
+  padding-top: 0;
+  padding: 1rem !important;
+
+  /* max-height: 70vh; */
+}
+
+.div-table {
+  overflow: scroll;
+  max-height: 55vh;
+}
+
+.table.presenca {
+  max-height: calc(70vh - 2rem);
+}
+
+.table.presenca > thead > tr > th:first-child {
+  width: 3rem;
+  text-align: center !important;
+}
+
+.table.presenca > thead > tr > th:last-child {
+  width: 0;
+}
+
+.rounded-circle {
+  border-style: solid !important;
+  border-color: black;
+  width: 100%;
+}
+
+.td-presenca {
+  display: flex;
+  justify-content: center;
+}
+
+.td-presenca > .form-switch {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.td-presenca > .form-switch > .form-check-input {
+  margin: 0;
+}
+
+.scroll {
+  background-color: transparent;
+  border: transparent;
+  overflow: scroll;
+  height: 40vh;
+
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#name_avaliados,
+#name_professor {
+  cursor: pointer;
+}
+
+#name_avaliados:hover,
+#name_professor:hover {
+  text-decoration: underline;
+  color: rgb(100, 100, 100);
+}
+
+.w-0 {
+  width: 0;
+}
+
+@media (max-width: 768px) {
+  .border-end {
+    display: none;
+  }
+}

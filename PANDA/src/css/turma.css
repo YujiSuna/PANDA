@@ -1,0 +1,109 @@
+@import url(/PANDA/src/css/universal.css);
+
+body {
+  margin-top: 0%;
+}
+
+/*---------------*/
+
+.container {
+  max-width: 2000px !important;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+.card {
+  margin-right: 4%;
+  margin-left: 4%;
+  margin-top: 3%;
+  padding-top: 0;
+  padding: 1rem !important;
+
+  max-height: 70vh;
+}
+
+.div-table {
+  overflow: scroll;
+  max-height: 55vh;
+}
+
+.table.presenca {
+  max-height: calc(70vh - 2rem);
+}
+
+.table.presenca > thead > tr > th:first-child {
+  width: 3rem;
+  text-align: center !important;
+}
+
+.table.presenca > thead > tr > th:last-child {
+  width: 0;
+}
+
+.rounded-circle {
+  border-style: solid !important;
+  border-color: black;
+  width: 100%;
+}
+
+.td-presenca {
+  display: flex;
+  justify-content: center;
+}
+
+.td-presenca > .form-switch {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.td-presenca > .form-switch > .form-check-input {
+  margin: 0;
+}
+
+.btn-close {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  margin: 1rem !important;
+}
+
+.scroll {
+  border-radius: 0px 0px 0px 0px;
+  background-color: transparent;
+  border: transparent;
+  overflow: scroll;
+  height: 35vh;
+  width: 100%;
+
+  border: 1px solid rgba(0, 0, 0, 0.125);
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+#name_professor {
+  cursor: pointer;
+}
+
+#name_professor:hover {
+  color: rgb(100, 100, 100);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .border-end {
+    display: none;
+  }
+
+  .card {
+    max-height: none;
+  }
+}

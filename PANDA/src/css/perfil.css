@@ -1,0 +1,45 @@
+@import url(/PANDA/src/css/universal.css);
+
+body {
+  margin-top: 0%;
+}
+
+/*---------------*/
+
+.container {
+  /* max-width: 2000px !important; */
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+.card {
+  margin-bottom: 5vh !important;
+  margin-top: 5vh !important;
+  padding: 1rem !important;
+  padding-top: 0;
+
+  height: 70vh;
+}
+
+.card.scroll > .row {
+  height: inherit;
+}
+
+.rounded-circle {
+  border-style: solid !important;
+  border-color: black;
+  width: 100%;
+}
+
+.scroll {
+  background-color: transparent;
+  border: transparent;
+  overflow: scroll;
+
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll::-webkit-scrollbar {
+  display: none;
+}

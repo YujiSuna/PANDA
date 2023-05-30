@@ -1,0 +1,58 @@
+@import url(/PANDA/src/css/universal.css);
+
+body {
+  margin-top: 0%;
+}
+
+/*---------------*/
+
+.container-fluid {
+  width: 100vw !important;
+  height: calc(100vh - 15vh) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.card {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 1rem !important;
+
+  max-height: 75vh;
+  min-height: 75vh;
+}
+
+.rounded-circle {
+  border-style: solid !important;
+  border-color: black;
+  width: 100%;
+}
+
+.btn-close {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  margin: 1rem !important;
+}
+
+.scroll {
+  border-radius: 0px 0px 0px 0px;
+  background-color: transparent;
+  border: transparent;
+  overflow: scroll;
+  height: 35vh;
+  width: 100%;
+
+  border: 1px solid rgba(0, 0, 0, 0.125);
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll::-webkit-scrollbar {
+  display: none;
+}

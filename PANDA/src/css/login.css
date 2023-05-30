@@ -1,0 +1,151 @@
+@import url("login-mobile.css");
+@import url("/PANDA/src/css/universal.css");
+
+.card-panda{
+    position: relative;
+    text-align: center;
+    border-radius: 0px 60px 0px 60px!important;
+    box-shadow: 0px 0px 5px rgb(150, 150, 150);
+    padding: 3%;
+}
+
+/*-------------------- left content --------------------*/
+
+#login-left, img{
+    width: 90%;
+    margin: auto;
+    vertical-align: middle;
+}
+
+/*-------------------- right content --------------------*/
+
+#login-right{
+    margin: auto;
+    text-align: left;
+}
+
+#bemVindo, #faca-login{
+    cursor: default;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#bemVindo {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+#faca-login {
+    font-weight: bold;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+/*---------- form content ----------*/
+
+#login-right > .card-group > label{
+    width: 100%;
+    display: block;
+    margin-top: 1rem;
+
+    /*----- fonte -----*/
+    font-weight: bold;
+    font-style: normal;
+    font-size: 118.75%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#login-right > .card-group > input{
+    outline: 0;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    text-align: left;
+    border-radius: 0px 15px 0px 15px;
+    border: 2px solid rgb(181,183,185);
+
+    /*----- fonte -----*/
+    font-size: 125%;
+    text-indent: 3%;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*----- recupera senha -----*/
+
+#recuperaSenha{
+    text-align: right;
+}
+
+#recuperaSenha > a {
+    font-size: 90%;
+    color: rgb(126, 125, 125);
+}
+
+#recuperaSenha > a {
+    color: rgb(56, 56, 56);
+}
+
+/*----- registre -----*/
+
+#registro{
+    margin-top: 3%;
+    text-align: center;
+}
+
+#registro > h5 {
+    cursor: default;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-style: normal;
+    font-family: Segoe UI;
+    color: rgba(168,168,168,1);
+}
+
+#registro > a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: rgba(0,118,166,1);
+    font-size: 131.25%;
+    letter-spacing: 0.2px;
+}
+
+#registro > a:hover {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: rgb(0, 160, 223);
+    font-size: 131.25%;
+}
+
+#recuperaSenha > a,
+#registro > a{
+    text-decoration: none;
+}
+
+/*----- login button -----*/
+
+#login-btn{
+    outline: 0;
+    border: 0px;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    border-radius: 0px 16px 0px 16px;
+    background-color: #0076a6;
+
+    margin-top: 3%;
+    margin-bottom: 2%;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 131.25%;
+}
+
+#login-btn:hover{
+    background-image: #005374;
+}
+
+
+

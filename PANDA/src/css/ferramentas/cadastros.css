@@ -1,0 +1,124 @@
+@import url(/PANDA/src/css/universal.css);
+
+.container {
+  max-width: 2000px !important;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+:root {
+  --card-height: 75vh;
+  --card-margin-y: calc((100vh - var(--card-height) - 20vh) / 2);
+  --nav-tab-height: calc(var(--card-height) / 7);
+  --card-cadastro-height: calc(var(--card-height) - var(--nav-tab-height));
+
+  --title-height: 7vh;
+}
+
+#card-cadastro {
+  width: 75vw;
+  max-height: var(--card-height);
+  min-height: var(--card-height);
+  transition: 0.5s;
+}
+
+#nav-tab {
+  max-height: var(--nav-tab-height);
+  min-height: var(--nav-tab-height);
+}
+
+#nav-tabContent,
+#nav-tabContent > *,
+.cardContent {
+  max-height: var(--card-cadastro-height);
+  min-height: var(--card-cadastro-height);
+  transition: 0.5s;
+}
+
+.title-cadastro {
+  max-height: var(--title-height);
+  min-height: var(--title-height);
+}
+
+.title-cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#id_aluno,
+#id_turma,
+#id_recado,
+#id_receiver {
+  min-width: 100%;
+}
+
+.col-6,
+.col-12 {
+  transition: 0.3s;
+}
+
+.submitBtn {
+  background-size: 200% auto !important;
+  background-position: 100% 0 !important;
+  background-repeat: no-repeat !important;
+  transition: background-position ease 0.4s !important;
+}
+
+.submitBtn.success {
+  border: 0;
+  background-position: 0 0 !important;
+  background-image: linear-gradient(
+    to right,
+    #64ff7e 0%,
+    #64ff7e 50%,
+    #0d6efd 50%,
+    #0d6efd 100%
+  )!important;
+}
+
+.submitBtn.failure {
+  border: 0;
+  background-position: 0 0 !important;
+  background-image: linear-gradient(
+    to right,
+    #ff6464 0%,
+    #ff6464 50%,
+    #0d6efd 50%,
+    #0d6efd 100%
+  )!important;
+}
+
+.vscomp-toggle-button,
+#detalhe {
+  font-size: 1.25rem;
+}
+
+.vscomp-options-container {
+  max-height: 25vh !important;
+}
+
+.vscomp-options-container::-webkit-scrollbar {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  #turmaForm > :nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #card-cadastro {
+    width: 100vw !important;
+  }
+
+  #nav-1-tab,
+  #nav-2-tab,
+  #nav-3-tab,
+  #nav-4-tab {
+    font-size: x-small !important;
+  }
+}

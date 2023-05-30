@@ -1,0 +1,198 @@
+@import url(/PANDA/src/css/universal.css);
+
+.container {
+  max-width: 2000px !important;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+:root {
+  --card-height: 75vh;
+  --card-margin-y: calc((100vh - var(--card-height) - 20vh) / 2);
+  --nav-tab-height: calc(var(--card-height) / 7);
+  --card-cadastro-height: calc(var(--card-height) - var(--nav-tab-height));
+  --title-height: 7vh;
+
+  --CF-content-height: calc(var(--card-height) - 1vh);
+  --main-title-height: calc((var(--card-height) - 1vh) / 8);
+  --main-content-height: calc(
+    var(--CF-content-height) - var(--main-title-height) - 2rem
+  );
+
+  --sub-title-height: calc(var(--main-title-height) / 2);
+  --classList-height: calc(
+    var(--main-content-height) - var(--sub-title-height) - 1rem
+  );
+}
+
+#card-ferramenta {
+  width: 75vw;
+  max-height: var(--card-height);
+  min-height: var(--card-height);
+}
+
+#card-ferramenta > .container-fluid,
+#card-ferramenta > .container-fluid > .row {
+  max-height: var(--CF-content-height);
+  min-height: var(--CF-content-height);
+}
+
+#card-ferramenta .container-fluid {
+  margin-top: calc((var(--card-height) - var(--CF-content-height)) / 2);
+  margin-bottom: calc((var(--card-height) - var(--CF-content-height)) / 2);
+}
+
+#card-ferramenta #sidebarMenu,
+#card-ferramenta #sidebarMenu > div {
+  max-height: var(--CF-content-height);
+  min-height: var(--CF-content-height);
+}
+
+#card-ferramenta ul {
+  height: calc(var(--CF-content-height) - 2rem);
+  justify-content: space-around;
+  text-align: center;
+  line-height: 3rem;
+}
+
+#card-ferramenta ul li {
+  border: solid royalblue 2px;
+  border-radius: 50px;
+}
+
+#card-ferramenta main {
+  max-height: var(--CF-content-height);
+  min-height: var(--CF-content-height);
+}
+
+#card-ferramenta #main-title {
+  max-height: var(--main-title-height);
+  min-height: var(--main-title-height);
+}
+
+#card-ferramenta #main-content {
+  max-height: var(--main-content-height);
+  min-height: var(--main-content-height);
+  width: 100%;
+}
+
+.mainContentCurrent {
+  display: flex !important;
+}
+
+.mainContentDisabled {
+  display: none !important;
+}
+
+/* mainContentFerramentas2 -> menuCalendario.php */
+#mainContentFerramentas2 #main-content {
+  width: 100%;
+}
+
+#mainContentFerramentas2 #main-content #calendarTable {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  max-height: var(--main-content-height);
+  min-height: var(--main-content-height);
+}
+
+#mainContentFerramentas2 #calendarTable thead tr,
+#mainContentFerramentas2 #calendarTable thead tr th {
+  max-height: 1rem;
+  min-height: 1rem;
+}
+
+#mainContentFerramentas2 #calendarTable tbody {
+  max-height: calc(var(--main-content-height) - 1rem);
+  min-height: calc(var(--main-content-height) - 1rem);
+}
+
+#mainContentFerramentas2 #calendarTable td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#mainContentFerramentas2 #calendarTable td:hover {
+  background-color: cornsilk;
+}
+
+#mainContentFerramentas2 #calendarTable td .badge{
+  /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%); */
+  display: block;
+}
+
+#mainContentFerramentas2 #calendarTable td span[tipo="data"]{
+  /* background-color: yellow; */
+  /* position: absolute; */
+  padding: 3px;
+  /* left: 0; */
+  /* top: 0; */
+}
+
+.badge[tipo="recado"] + .badge[tipo="Hoje"]{
+  top: 20%;
+}
+
+.badge[tipo="recado"]{
+  top: 50%;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #555;
+  border-bottom: 10px solid transparent;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 20px solid #555;
+  border-bottom: 10px solid transparent;
+}
+
+/* mainContentFerramentas3 -> menuChamadas.php */
+#card-ferramenta #sub-title {
+  margin-bottom: 1rem;
+
+  max-height: var(--sub-title-height);
+  min-height: var(--sub-title-height);
+}
+
+#main-content #classList {
+  display: flex;
+  overflow-y: scroll;
+  border-width: 2px;
+  flex-direction: column;
+
+  max-height: var(--classList-height);
+  min-height: var(--classList-height);
+}
+
+#main-content #classList::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+}
+
+#main-content #classList a {
+  display: flex;
+  color: black;
+  padding-left: 1em;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+  max-height: calc(var(--classList-height) / 6.5);
+  min-height: calc(var(--classList-height) / 6.5);
+}
+
+#main-content #classList a > * {
+  margin: 0;
+  padding: 0;
+}

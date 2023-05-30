@@ -1,0 +1,100 @@
+@import url(/PANDA/src/css/universal.css);
+/* @import url(painel-mobile.css); */
+
+body{
+    margin-top: 0%;
+}
+
+/*---------------*/
+
+.container{
+    max-width: 2000px!important;
+    width: 100%;
+    margin-top: 0!important;
+}
+
+.card{
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-top: 3%;
+    padding-top: 0;
+    padding: 2%!important;
+}
+
+.card-title{
+    font-size: 200%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    padding: 0.5rem 0;
+}
+
+.scroll{
+    border-radius: 0px 0px 0px 60px;
+    background-color: transparent;
+    scroll-behavior: smooth;
+    border: transparent;
+    overflow: scroll;
+    height: 45vh;
+
+    border: 1px solid rgba(0,0,0,.125);
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: block;  /* IE and Edge */
+    scrollbar-width: block;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll::-webkit-scrollbar {
+  display: block;
+}
+
+.list-group-item{
+    padding: 0rem 1rem !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.list-group-item:focus{
+    background-color: rgb(190, 190, 190)!important ;
+}
+
+.row{
+    height: fit-content!important;
+}
+
+.col-4{
+    padding-top: calc(var(--bs-gutter-x)/ 4);
+    padding-bottom: calc(var(--bs-gutter-x)/ 4);
+}
+
+.rounded-circle{
+    border-style: solid!important;
+    border-color: black;
+    width: 100%;
+}
+
+.card-body{
+    text-align: left;
+    padding: 0.5rem 0;
+    align-self: center;
+}
+
+.card-body > .desc1,
+.card-body > .desc2 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+
+.card-body > .desc1{
+    margin-top: 5%;
+    margin-bottom: 0rem;
+    font-weight: bold;
+}
+
+.card-body > .desc2{
+    font-weight: normal;
+    margin-bottom: 5%;
+}

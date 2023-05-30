@@ -1,0 +1,140 @@
+<?php
+// echo '<pre>';
+// var_dump($_GET["bGFzdEFkZGVkUmVjYWRvSWQNCg"]);
+// echo '</pre>';
+
+$tipo = '1';
+$rKeys = ['id', 'name'];
+$receivers = [];
+switch ($tipo) {
+    case '1':
+        $receiver = 'Turma';
+        $receivers = $allTurmas;
+        foreach ($receivers as $key => $auxReceiver) {
+            $auxReceiver['id'] = $auxReceiver['id_turma'];
+            $auxReceiver['name'] = $auxReceiver['name_turma'];
+            $receivers[$key] = $auxReceiver;
+        }
+        break;
+
+    case '2':
+        $receiver = 'Aluno';
+        $receivers = $allAlunos;
+        foreach ($receivers as $key => $auxReceiver) {
+            $auxReceiver['id'] = $auxReceiver['id_user'];
+            $auxReceiver['name'] = $auxReceiver['name'] . " " . $auxReceiver['surname'];
+            $receivers[$key] = $auxReceiver;
+        }
+        break;
+
+    default:
+        # code...
+        break;
+}
+?>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/virtual-select-plugin@1.0.16/dist/virtual-select.min.css" integrity="sha256-umM1c7RyV/yt71xjIgPErO3PYajUHRxxvWJn+YRWSWw=" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/virtual-select-plugin@1.0.16/dist/virtual-select.min.js" integrity="sha256-6PuvJQXKao5OMgfl/WZUzznOvrd0J3hZcaT0XpJRDO0=" crossorigin="anonymous"></script>
+</head>
+
+<form class="row col-12 m-0 needs-validation" id="recadoForm" .reset();novalidate>
+    <div class="col-6">
+        <div class="form-control">
+            <?php
+            if (isset($_GET['id_recado']) && !empty($_GET['id_recado'])) {
+                echo '<h3>Para quem irá enviar este recado?</h3>';
+                echo '<h5>Nome do recado: ' . $_GET["name_recado"] . '</h5>';
+                echo '<input type="hidden" value="' . $_GET["id_recado"] . '" name="id_recado" id="id_recado">';
+            } else {
+                echo '<label for="id_recado" class="form-label">Recado</label>';
+                echo '<div id="id_recado"></div>';
+            }
+            ?>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="form-control">
+            <label for="id_receiver" class="form-label"><?php echo $receiver ?></label>
+            <div id="id_receiver"></div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <button class="btn btn-primary w-100 mt-2 submitBtn" type="submit">
+            <h5>criar</h5>
+        </button>
+    </div>
+</form>
+
+<div class="mt-2 text-center">
+    <a class="btn btn-outline-secondary" onclick="backHistory()" style="text-decoration: none;">
+        <span>Voltar</span>
+    </a>
+</div>
+
+<script>
+    $(document).ready(() => {
+        initVSrecado();
+    });
+
+    function initVSrecado() {
+
+        <?php
+        if (!isset($_GET['id_recado']) || empty($_GET['id_recado'])) {
+            echo 'initIdRecado()';
+        }
+        ?>
+
+        VirtualSelect.init({
+            ele: '#id_receiver',
+            name: 'id_receiver',
+            placeholder: 'selecione o(s) receptor(res)',
+            options: [
+                <?php
+                if (!empty($receivers)) {
+                    foreach ($receivers as $receiver) {
+                        $value = intval($receiver['id']);
+                        $label = $receiver['name'];
+                        echo "{ label: '$label', value: '$value' },";
+                    }
+                } else {
+                    echo "{ label: 'nenhum receptor encontrado', value: '' }";
+                }
+                ?>
+            ],
+            multiple: true,
+            keepAlwaysOpen: true,
+        });
+
+        function initIdRecado() {
+            VirtualSelect.init({
+                ele: '#id_recado',
+                name: 'id_recado',
+                placeholder: 'selecione o recado',
+                options: [
+                    <?php
+                    if (!empty($allRecados)) {
+                        foreach ($allRecados as $recado) {
+                            $value = intval($recado['id_recado']);
+                            $label = $recado['name_recado'];
+                            echo "{ label: '" . $label . "', value: " . $value . " },";
+                        }
+                    } else {
+                        echo "{ label: 'nenhum recado encontrado', value: '' }";
+                    }
+                    ?>
+                ],
+                search: true,
+                keepAlwaysOpen: true,
+            });
+        }
+
+        inputs = document.getElementsByClassName('vscomp-hidden-input');
+        for (const input of inputs) {
+            input.classList.add('form-control');
+            input.setAttribute('required', '');
+        }
+    }
+</script>
